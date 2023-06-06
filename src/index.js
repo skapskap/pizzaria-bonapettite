@@ -13,35 +13,35 @@ const pizzaData = [
   {
     name: "Pizza Marguerita",
     ingredients: "Tomate e mussarela",
-    price: 10,
+    price: 30,
     photoName: "pizzas/margherita.jpg",
     soldOut: false,
   },
   {
     name: "Pizza de Espinafre",
     ingredients: "Tomate, mussarela, espinafre e ricotta",
-    price: 12,
+    price: 28,
     photoName: "pizzas/spinaci.jpg",
     soldOut: false,
   },
   {
     name: "Pizza de Champingnon",
     ingredients: "Tomate, mussarela, cogumelos e cebola",
-    price: 12,
+    price: 35,
     photoName: "pizzas/funghi.jpg",
     soldOut: false,
   },
   {
     name: "Pizza de Pepperoni",
     ingredients: "Tomate, mussarela e pepperoni",
-    price: 15,
+    price: 40,
     photoName: "pizzas/salamino.jpg",
     soldOut: true,
   },
   {
     name: "Pizza de Presunto",
     ingredients: "Tomate, mussarela, presunto, rúcula e queijo burrata",
-    price: 18,
+    price: 26,
     photoName: "pizzas/prosciutto.jpg",
     soldOut: false,
   },
@@ -104,7 +104,9 @@ function Pizza({ pizzaObj }) {
         <h3>{pizzaObj.name}</h3>
         <p>{pizzaObj.ingredients}</p>
 
-        <span>{pizzaObj.soldOut ? "SOLD OUT" : pizzaObj.price}</span>
+        <span>
+          {pizzaObj.soldOut ? "ESGOTADO" : "R$" + pizzaObj.price + ",00"}
+        </span>
       </div>
     </li>
   );
